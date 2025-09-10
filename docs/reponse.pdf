@@ -1,0 +1,38 @@
+-------Labo 0 Sif Marchane-------
+
+
+Question 1: 
+
+    Il donne d'abord si ça a échoué et écrit failure puis donne la ligne exacte et 
+    pourquoi ça a échoué en rouge donc il aide à localiser l'erreur. Ensuite il donne 
+    un cours résumé des informations des tests. 
+
+    Sortie du terminal:
+
+    FF                                                                                             [100%]
+============================================= FAILURES ============================================== 
+_____________________________________________ test_app ______________________________________________ 
+
+    def test_app():
+        my_calculator = Calculator()
+>       assert my_calculator.get_hello_message() == "Calculatrice"
+E       AssertionError: assert '== Calculatrice v1.0 ==' == 'Calculatrice'
+E
+E         - Calculatrice
+E         + == Calculatrice v1.0 ==
+
+src\tests\test_calculator.py:11: AssertionError
+___________________________________________ test_addition ___________________________________________ 
+
+    def test_addition():
+        my_calculator = Calculator()
+>       assert addition(2, 3) == 5
+               ^^^^^^^^
+E       NameError: name 'addition' is not defined
+
+src\tests\test_calculator.py:18: NameError
+====================================== short test summary info ====================================== 
+FAILED src/tests/test_calculator.py::test_app - AssertionError: assert '== Calculatrice v1.0 ==' == 'Calculatrice'
+FAILED src/tests/test_calculator.py::test_addition - NameError: name 'addition' is not defined        
+2 failed in 0.07s
+
