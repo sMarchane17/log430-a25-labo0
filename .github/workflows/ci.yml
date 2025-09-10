@@ -22,6 +22,7 @@ jobs:
           pip install pytest
 
       - name: Tests
+        working-directory: src
         run: | 
-          PYTHONPATH=. pytest
+          python -m pytest 
 
